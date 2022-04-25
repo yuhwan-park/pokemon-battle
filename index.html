@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokemon Battle</title>
+</head>
+
+<body>
+    <label for="rangeInput">BGM</label>
+    <input type="range" name="rangeInput" min="0" max="1" step="0.01" value="0.01" id="rangeInput">
+    <button id="playBtn">Play</button>
+    <div id="page1">
+        <div class="pageContainer">
+            <h1>포켓몬 배틀 게임</h1>
+            <p>마이크 설정을 허용해주세요!</p>
+            <p>게임을 시작하고 싶다면 '입장'을 외쳐주세요.</p>
+        </div>
+    </div>
+    <div id="page2">
+        <div class=" container">
+            <div id="status" class="myStatus">
+                <span>치코리타</span>
+                <span><span id="myHp"></span> / 20</span>
+            </div>
+            <div id="status" class="enemyStatus">
+                <span>구구</span>
+                <span><span id="enemyHp"></span> / 20</span>
+            </div>
+            <img class="myPokemon" src="./images/chi.PNG" alt="pokemon" />
+            <img class="enemyPokemon" src="./images/gugu.PNG" alt="pokemon" />
+            <div class="skillContainer">
+                <div id="choose">
+                    <span id="fightBtn">싸우다</span>
+                    <span id="runBtn">도망치다</span>
+                </div>
+                <div id="skill">
+                    <span>몸통박치기</span>
+                    <span>울음소리</span>
+                    <span>솔라빔</span>
+                    <span>누르기</span>
+                </div>
+                <div id="skillStatus">구구(은)는 생각중...</div>
+            </div>
+            <div class="guide">
+                <span class="guideOpen">스킬이 왜 안써지나요?</span>
+                <div class="guidePara">
+                    <p>마이크로 명령을 외치세요!<br>각 스킬마다 정해진 주문이 있습니다.</p>
+                    <p>몸통박치기 => 가라 몸통박치기!<br>공격력 1배 데미지</p>
+                    <p>울음소리 => 울어라!<br>적 스킬공격력 감소</p>
+                    <p>누르기 => 누르기!<br>공격력 2배 데미지</p>
+                    <p>솔라빔 => 죽어라 솔라빔!<br>공격력 3배 데미지</p>
+                    <p>스킬에는 명중 확률이 있습니다.</p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="annyang.js"></script>
+    </div>
+</body>
+
+</html>
